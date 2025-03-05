@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    
     public float jumpForce = 7f;
     private Rigidbody2D rb;
     private LayerMask groundLayer;
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             rb.velocity = Vector2.up * jumpForce;
+            AudioManager.instance.Play("wing");
         }
     }
     
@@ -32,7 +35,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == groundLayer)
         {
-            Time.timeScale = 0;
+            AudioManager.instance.Play("hit");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1;
         }
     }
 }

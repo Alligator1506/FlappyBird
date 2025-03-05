@@ -9,6 +9,7 @@ public class Score : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             ScoreAdd.Instance.AddScore(1); // Truy cập qua Singleton
+            AudioManager.instance.Play("point");
         }
     }
 }

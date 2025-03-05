@@ -2,33 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour 
-{
-    private static T _instant = null;
-    public static T Instant
-    {
-        get
-        {
-            if (_instant == null)
-            {
-                if (FindObjectOfType<T>() != null)
-                    _instant = FindObjectOfType<T>();
-                else
-                    new GameObject().AddComponent<T>().name = "Singleton_"+  typeof(T).ToString();
-            }
 
-            return _instant;
-        }
-    }
-       
-    void Awake()
+namespace UIExample
+{
+    public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        if (_instant != null && _instant.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
+        private static T m_Ins;
+
+        public static T Ins
         {
-            Debug.LogError("Singleton already exist "+ _instant.gameObject.name);
-            Destroy(this.gameObject);
+            get
+            {
+                if (m_Ins == null)
+                {
+                    // Find singleton
+                    m_Ins = FindObjectOfType<T>();
+
+                    // Create new instance if one doesn't already exist.
+                    if (m_Ins == null)
+                    {
+                        // Need to create a new GameObject to attach the singleton to.
+                        var singletonObject = new GameObject();
+                        m_Ins = singletonObject.AddComponent<T>();
+                        singletonObject.name = typeof(T).ToString() + " (Singleton)";
+
+                    }
+
+                }
+                return m_Ins;
+            }
         }
-        else
-            _instant = this.GetComponent<T>();
+
     }
 }
