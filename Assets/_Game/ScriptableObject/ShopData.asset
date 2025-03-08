@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b35ea37425a83942b264a754e0cc5ea, type: 3}
   m_Name: ShopData
   m_EditorClassIdentifier: 
-  skinItems:
-  - name: Skin1
+  _skinItems:
+  - name: Skin 1
     type: 0
-  - name: Skin2
+  - name: Skin 2
     type: 1
-  - name: Skin3
+  - name: Skin 3
     type: 2
-  - name: Skin4
+  - name: Skin 4
     type: 3
-  - name: Skin5
+  - name: Skin 5
     type: 4
-  - name: Skin6
+  - name: Skin 6
     type: 5
-  - name: Skin7
+  - name: Skin 7
     type: 6

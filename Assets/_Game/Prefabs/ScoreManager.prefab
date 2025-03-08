@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8846375833024822585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8344654732402090672}
+  - component: {fileID: 3827794958049562132}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8344654732402090672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846375833024822585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3827794958049562132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846375833024822585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90778bbd6d5116841b9f2277a2da926f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  digitSprites:
+  - {fileID: 21300000, guid: 342bf8085d0d41a4192a6ae8b203bc59, type: 3}
+  - {fileID: 21300000, guid: 6e13bd6a90ab30945914e34f50f44123, type: 3}
+  - {fileID: 21300000, guid: ad26c84c95bc38840b28825384edddb2, type: 3}
+  - {fileID: 21300000, guid: 31d3127e9e9f7ff489a9e136e6194786, type: 3}
+  - {fileID: 21300000, guid: e180e38b6f04cea4985878adf3e4af35, type: 3}
+  - {fileID: 21300000, guid: c4512709f3ce6fe48b15b84adc483ee4, type: 3}
+  - {fileID: 21300000, guid: 77800afa4ed9e614ea430862ee178936, type: 3}
+  - {fileID: 21300000, guid: 24329a45181a5284f91ed14476e9930e, type: 3}
+  - {fileID: 21300000, guid: 16006d49a688cdf4c9fbff73d25c651b, type: 3}
+  - {fileID: 21300000, guid: bfe2689247e33e84cae8811689d4a116, type: 3}
+  digitPrefab: {fileID: 8677590885079352835, guid: 00e24aaca6d9487459c028ca6967948e, type: 3}
+  scoreDisplay: {fileID: 0}

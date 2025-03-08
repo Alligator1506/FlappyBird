@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1020235823734173464}
   - component: {fileID: 7803498491312417204}
   - component: {fileID: 3585944866378422676}
-  - component: {fileID: -2816887793550517772}
+  - component: {fileID: 6056693391953695496}
   m_Layer: 0
   m_Name: Bird1
   m_TagString: Player
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &3585944866378422676
 Animator:
   serializedVersion: 5
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-2816887793550517772
+--- !u!114 &6056693391953695496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

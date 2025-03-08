@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UIExample;
 using UnityEngine;
 
-public enum GameState {MainMenu, GamePlay, Finish}
+public enum GameState {MainMenu, GamePlay, GameOver}
 
 public class GameManager : Singleton<GameManager>
 {

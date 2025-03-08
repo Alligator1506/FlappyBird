@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0668b7ed078454b4093be953f2f0cf73, type: 3}
   m_Name: UserData
   m_EditorClassIdentifier: 
-  playerSkin: 1
+  playerSkin: 0
   isTest: 0

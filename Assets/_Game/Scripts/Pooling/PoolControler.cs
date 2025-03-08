@@ -150,6 +150,16 @@ public enum PoolType
     Skin5,
     Skin6,
     Skin7,
+    
+    Pipe1,
+    Pipe2,
+    Pipe3,
+    Pipe4,
+    Pipe5,
+    Pipe6,
+    Pipe7,
+    
+    
 }
 
 

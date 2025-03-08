@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    private bool IsCanUpdate => GameManager.Ins.IsState(GameState.GamePlay);
+    SkinType _skinType = SkinType.Skin1;
+    
+    private float topBoundary = 4.5f;    
+    private float bottomBoundary = -4.5f;
     
     public float jumpForce = 7f;
     private Rigidbody2D rb;
@@ -19,7 +24,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Fly();
+        if (IsCanUpdate)
+        {
+            Fly();
+            Vector3 birdPosition = transform.position;
+            birdPosition.y = Mathf.Clamp(birdPosition.y, bottomBoundary, topBoundary);
+            transform.position = birdPosition;
+        }
     }
 
     private void Fly()
@@ -36,8 +47,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.layer == groundLayer)
         {
             AudioManager.instance.Play("hit");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Time.timeScale = 1;
+            UIManager.Ins.CloseAll();
+            UIManager.Ins.OpenUI<UIGameOver>();
         }
     }
 }
