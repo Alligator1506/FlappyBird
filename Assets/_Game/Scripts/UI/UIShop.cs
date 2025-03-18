@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UIShop : UICanvas
 {
-    [SerializeField] private Transform skinPoint;
+    //[SerializeField] private Transform skinPoint;
     
     [SerializeField] ShopData shopData;
     //SerializeField] ButtonState buttonState;
@@ -50,7 +50,7 @@ public class UIShop : UICanvas
             SimplePool.Despawn(_currentSkin);
         }
 
-        _currentSkin = SimplePool.Spawn<Skin>((PoolType)skinType, Vector3.zero, Quaternion.identity, skinPoint);
+        _currentSkin = SimplePool.Spawn<Skin>((PoolType)skinType, Vector3.zero, Quaternion.identity);
         
         // ButtonState.State state = (ButtonState.State)UserData.Ins.GetDataState(weaponType.ToString(), 0);
         // buttonState.SetState(state);

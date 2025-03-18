@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Constant
 {
+    public const string HIGH_SCORE_KEY = "HighScore";
    
 }
 

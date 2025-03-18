@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Score : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player") && UIGamePlay.Instance != null)
         {
-            ScoreAdd.Instance.AddScore(1); // Truy cập qua Singleton
+            UIGamePlay.Instance.AddScore(1);
             AudioManager.instance.Play("point");
         }
     }

@@ -12,10 +12,8 @@ public class UIMainMenu : UICanvas
     
     public void PlayButton()
     {
-        UIManager.Ins.OpenUI<UIGamePlay>();
-        //LevelManager.Ins.OnPlay();
-        //UIManager.Ins.OpenUI<UIGamePlay>();
-    
+        LevelManager.Ins.StartGame();
+        UIManager.Ins.OpenUI<UIGameReady>();
         Close(0);
     }
     
